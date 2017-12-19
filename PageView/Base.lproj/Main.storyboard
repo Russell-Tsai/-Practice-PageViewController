@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="133"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="LuH-ik-980">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="aEx-Nm-0zF" customClass="PageViewController" customModule="PageView" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="STZ-64-Aw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="133"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="Rx4-Rd-hRs">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughContentViewController" id="TxM-pa-HZ7" customClass="ContentViewController" customModule="PageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dVB-fy-nir">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShT-B9-IbM">
+                                <rect key="frame" x="20" y="319" width="335" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ftb-uH-sI8">
+                                <rect key="frame" x="0.0" y="630" width="375" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9a-RD-AL3">
+                                <rect key="frame" x="319" y="637" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextBtnPressed:" destination="TxM-pa-HZ7" eventType="touchUpInside" id="yW2-Yf-crb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.44558560110844325" blue="0.44489076085460688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ABh-AB-iY8" firstAttribute="bottom" secondItem="h9a-RD-AL3" secondAttribute="bottom" id="3Xg-iR-02E"/>
+                            <constraint firstItem="ABh-AB-iY8" firstAttribute="trailing" secondItem="ftb-uH-sI8" secondAttribute="trailing" id="4dm-fG-Szf"/>
+                            <constraint firstItem="ABh-AB-iY8" firstAttribute="trailing" secondItem="h9a-RD-AL3" secondAttribute="trailing" constant="10" id="6Ap-4R-NCG"/>
+                            <constraint firstItem="ShT-B9-IbM" firstAttribute="centerY" secondItem="dVB-fy-nir" secondAttribute="centerY" id="9YW-vp-1rc"/>
+                            <constraint firstItem="ABh-AB-iY8" firstAttribute="bottom" secondItem="h9a-RD-AL3" secondAttribute="bottom" id="bcH-gH-frp"/>
+                            <constraint firstItem="ABh-AB-iY8" firstAttribute="trailing" secondItem="ShT-B9-IbM" secondAttribute="trailing" constant="20" id="eby-L7-MF9"/>
+                            <constraint firstItem="ftb-uH-sI8" firstAttribute="leading" secondItem="ABh-AB-iY8" secondAttribute="leading" id="lNG-iy-w2q"/>
+                            <constraint firstItem="ShT-B9-IbM" firstAttribute="leading" secondItem="ABh-AB-iY8" secondAttribute="leading" constant="20" id="mcl-D9-BhK"/>
+                            <constraint firstItem="h9a-RD-AL3" firstAttribute="trailing" secondItem="ABh-AB-iY8" secondAttribute="trailing" constant="10" id="oER-wO-URH"/>
+                            <constraint firstItem="ABh-AB-iY8" firstAttribute="bottom" secondItem="ftb-uH-sI8" secondAttribute="bottom" id="t3W-br-yLp"/>
+                            <constraint firstItem="ShT-B9-IbM" firstAttribute="centerX" secondItem="dVB-fy-nir" secondAttribute="centerX" id="wcp-7Z-EuS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ABh-AB-iY8"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="ShT-B9-IbM" id="nlo-BI-yws"/>
+                        <outlet property="forwardButton" destination="h9a-RD-AL3" id="F2C-yY-nx5"/>
+                        <outlet property="pageControl" destination="ftb-uH-sI8" id="05q-Hk-bx7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yix-SJ-ZAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="133"/>
+        </scene>
+    </scenes>
+</document>
